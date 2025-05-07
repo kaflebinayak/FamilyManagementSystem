@@ -1,9 +1,6 @@
 package com.binayak.family_management_system.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -18,12 +15,16 @@ public class FamilyMembers {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String memberName;
+    private String fristName;
+    private String lastName;
+    private String gender;
     private Long age;
     private String phone;
     private String address;
 
-
+    @Enumerated(EnumType.STRING)
+    private Role relation;
 
 
 }
+

@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -19,18 +20,17 @@ public class Users {
     private String password;
     private String fullName;
 //    private String phone;
-    private String address;
-    private String gender;
-    private Date dob;
-    private String image;
+//    private String address;
+//    private String gender;
+//    private Date dob;
+//    private String image;
 
 
     @Enumerated(EnumType.STRING)
     private Role relation;
 
-
     @OneToMany
-    List<Users> familyMembers;
+    private List<FamilyMembers> families = new ArrayList<>();
 
 
     @Override

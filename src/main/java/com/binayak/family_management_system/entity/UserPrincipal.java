@@ -19,11 +19,20 @@ public class UserPrincipal implements UserDetails {
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return Collections.singleton(new SimpleGrantedAuthority("USER"));
     }
+//    @Override
+//    public String getFullName(){return user.getFullName();}
 
     @Override
     public String getPassword() {
         return user.getPassword();
     }
+
+//    @Override
+//    public String getEmail(){return user.getEmail();}
+//    @Override
+//    public String getUsername() {
+//        return user.getFullName();
+//    }
 
     @Override
     public String getUsername() {

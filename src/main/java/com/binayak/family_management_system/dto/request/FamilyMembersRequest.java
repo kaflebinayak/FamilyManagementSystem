@@ -9,10 +9,17 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 
 public class FamilyMembersRequest {
-    private String memberName;
+
+    private int userId;
+    private String fristName;
+    private String lastName;
+    public String gender;
     private Long age;
     private String address;
     private String phone;
+
+
+//    private String time;
 
 }
 

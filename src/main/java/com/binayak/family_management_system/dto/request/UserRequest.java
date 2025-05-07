@@ -15,10 +15,10 @@ public class UserRequest {
     private String email;
     private String password;
     private String fullName;
-    private String phone;
-    private String address;
-    private String gender;
-    private Date dob;
-    private Role role;
+//    private String phone;
+//    private String address;
+//    private String gender;
+//    private Date dob;
+//    private Role role;
 //    private MultipartFile profilePhoto;
 }

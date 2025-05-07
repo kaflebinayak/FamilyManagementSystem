@@ -1,5 +1,6 @@
 package com.binayak.family_management_system.controller;
 
+import com.binayak.family_management_system.dto.request.LoginRequest;
 import com.binayak.family_management_system.dto.request.UserRequest;
 import com.binayak.family_management_system.entity.Users;
 import com.binayak.family_management_system.service.UserService;
@@ -26,7 +27,7 @@ public class UserController {
     }
 
     @PostMapping("/login")
-    public String login (@RequestBody UserRequest user){
+    public String login (@RequestBody LoginRequest user){
 
         return service.verify(user);
 

@@ -1,6 +1,7 @@
 package com.binayak.family_management_system.service;
 
 import com.binayak.family_management_system.config.FileHandler;
+import com.binayak.family_management_system.dto.request.LoginRequest;
 import com.binayak.family_management_system.dto.request.UserRequest;
 import com.binayak.family_management_system.entity.Users;
 import com.binayak.family_management_system.repo.UserRepo;
@@ -44,7 +45,7 @@ public class UserService {
     }
 
 
-    public String verify(UserRequest user) {
+    public String verify(LoginRequest user) {
         Authentication authentication=authManager.authenticate(new UsernamePasswordAuthenticationToken(user.getEmail(),user.getPassword()));
         if(authentication.isAuthenticated())
             return jwtService.generateToken(user.getEmail());
